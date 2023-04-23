@@ -1,0 +1,44 @@
+
+# Linear Regression Assignment
+
+import numpy as np
+from sklearn import dataset
+boston = datasets.load_boston()
+
+X= boston.data
+y= boston.target
+x.shape
+
+from sklearn import model_selection
+
+x_train,x_test,y_train,y_test=model_selection.train_test_split(X,y,test_size=0.3)
+x_train.shape
+
+algl = Linear_Regression()
+algl.fit(x_train,y_train)
+
+import matplotlib.pyplot as plt
+m = algl.coef_[0]
+c = algl.intercept_
+
+x_line=np.arange(0,10,0.1)
+y_line = m * x_line + c 
+
+plt.plot(x_line,y_line,"r")
+train_ID = x_train.reshape(75)
+plt.scatter(x_train,y_train)
+plt.show()
+
+import matplotlib.pyplot as plt
+m = algl.coef_[0]
+c = algl.intersept_
+
+x_line = np.arange(30,70,0.1)
+y_line = m * x_line + c
+plt.plot(x_line,y_line,"r")
+train_ID = x_test.reshape(25)
+plt.scayyer(x_test,y_test)
+plt.show()
+
+
+
